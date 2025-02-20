@@ -1,6 +1,8 @@
+// pages/_app.tsx
 import type { AppProps } from "next/app";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import Navigation from "../components/Navigation";
 
 const theme = createTheme({
   palette: {
@@ -26,6 +28,11 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+
+      {/* Navigation appears on every page */}
+      <Navigation />
+
+      {/* Render the main page component */}
       <Component {...pageProps} />
     </ThemeProvider>
   );
