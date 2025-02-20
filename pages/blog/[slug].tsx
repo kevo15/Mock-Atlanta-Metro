@@ -210,8 +210,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
                     }}
                   >
                     <Typography variant="body1" fontStyle="italic">
-                      "Digital notary services are not just a trend; they are
-                      the future of legal verifications."
+                      &quot;Digital notary services are not just a trend; they are the future of legal verifications.&quot;
                     </Typography>
                   </Box>
 
