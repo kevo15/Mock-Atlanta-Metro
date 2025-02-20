@@ -24,7 +24,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ShareIcon from "@mui/icons-material/Share";
 import { blogPosts, BlogPost } from "../../data/blogPosts";
-import Claybrooks from "../../public/YolandaClaybrooks.png"
+import Claybrooks from "../../public/YolandaClaybrooks.png";
 
 const theme = createTheme({
   palette: {
@@ -61,7 +61,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
         }}
       >
         <Container maxWidth="md">
-
           <Box sx={{ position: "relative", mb: 4 }}>
             <Box sx={{ position: "relative", height: { xs: 250, md: 500 } }}>
               <CardMedia
@@ -181,60 +180,29 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
                     Introduction
                   </Typography>
                   <Typography variant="body1" paragraph>
-                    {post.summary} Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Pellentesque sit amet libero ac nulla
-                    ultrices congue.
+                    {post.introduction}
                   </Typography>
 
                   <Typography id="main" variant="h4" gutterBottom>
                     Main Discussion
                   </Typography>
                   <Typography variant="body1" paragraph>
-                    Here you can dive deep into the subject matter. The evolving
-                    technology in notary services is revolutionizing traditional
-                    approaches. Detailed insights, case studies, and expert
-                    opinions can be highlighted here.
+                    {post.mainDiscussion}
                   </Typography>
-
-                  <Box
-                    sx={{
-                      borderLeft: "4px solid",
-                      borderColor: theme.palette.secondary.main,
-                      pl: 2,
-                      my: 2,
-                    }}
-                  >
-                    <Typography variant="body1" fontStyle="italic">
-                      &quot;Digital notary services are not just a trend; they are the future of legal verifications.&quot;
-                    </Typography>
-                  </Box>
 
                   <Typography id="insights" variant="h4" gutterBottom>
                     Additional Insights
                   </Typography>
                   <Typography variant="body1" paragraph>
-                    Further details, statistics, or expert commentary can be
-                    added in this section. The benefits of modernization in
-                    legal services are vast and multifaceted.
+                    {post.additionalInsights}
                   </Typography>
 
                   <Typography id="conclusion" variant="h4" gutterBottom>
                     Conclusion
                   </Typography>
                   <Typography variant="body1" paragraph>
-                    In conclusion, as technology transforms notary services,
-                    embracing these advancements can lead to enhanced security,
-                    efficiency, and overall client satisfaction.
+                    {post.conclusion}
                   </Typography>
-
-                  <Paper
-                    variant="outlined"
-                    sx={{ backgroundColor: "#f5f5f5", p: 2, my: 2 }}
-                  >
-                    <Typography variant="body2" component="pre" sx={{ m: 0 }}>
-                      {``}
-                    </Typography>
-                  </Paper>
                 </Box>
 
                 <Box
