@@ -24,6 +24,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ShareIcon from "@mui/icons-material/Share";
 import { blogPosts, BlogPost } from "../../data/blogPosts";
+import Claybrooks from "../../public/YolandaClaybrooks.png"
 
 const theme = createTheme({
   palette: {
@@ -60,13 +61,6 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
         }}
       >
         <Container maxWidth="md">
-          <Box sx={{ mt: 2 }}>
-            <Link href="/" legacyBehavior>
-              <Button variant="text" color="primary">
-                &larr; Back to Blog
-              </Button>
-            </Link>
-          </Box>
 
           <Box sx={{ position: "relative", mb: 4 }}>
             <Box sx={{ position: "relative", height: { xs: 250, md: 500 } }}>
@@ -78,6 +72,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
+                  marginTop: 3,
                   borderRadius: 2,
                   transition: "transform 0.5s",
                   "&:hover": {
@@ -254,7 +249,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ post }) => {
                 >
                   <Avatar
                     alt={post.author}
-                    src="https://picsum.photos/100/100?random=1"
+                    src={Claybrooks.src}
                     sx={{ width: 80, height: 80, mr: 2 }}
                   />
                   <Box>
